@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>QuizMaster - Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            QuizMaster
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="leaderboard.html">
+                Leaderboard
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="quiz-container">
+
+
+        <!-- Quiz Header -->
+
+        <div class="quiz-header">
+
+            <div>
+
+                <p>
+                    Question
+                    <span id="questionNumber">
+                        1
+                    </span>
+                    /
+                    <span id="totalQuestions">
+                        10
+                    </span>
+                </p>
+
+            </div>
+
+
+            <div class="timer">
+
+                <span>Time:</span>
+
+                <span id="timer">
+                    15
+                </span>
+
+                <span>s</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Progress -->
+
+        <div class="progress-container">
+
+            <div
+                id="progressBar"
+                class="progress-bar"
+            ></div>
+
+        </div>
+
+
+        <!-- Question -->
+
+        <section class="question-card">
+
+            <h2 id="question">
+                Loading question...
+            </h2>
+
+
+            <div
+                id="options"
+                class="options"
+            ></div>
+
+
+            <button
+                id="nextButton"
+                class="primary-btn next-btn"
+                onclick="nextQuestion()"
+                disabled
+            >
+                Next Question
+            </button>
+
+        </section>
+
+
+        <!-- Weather -->
+
+        <section class="quiz-weather">
+
+    <div class="weather-title">
+
+        <h3>Live Weather</h3>
+
+        <button
+            onclick="refreshWeather()"
+            class="small-btn"
+        >
+            Refresh
+        </button>
+
+    </div>
+
+    <div
+        id="quizWeather"
+        class="weather-result"
+    >
+        Detecting your location...
+    </div>
+
+</section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+    <script src="quiz.js"></script>
+    <script src="weather.js"></script>
+
+</body>
+
+</html>
